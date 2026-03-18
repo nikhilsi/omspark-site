@@ -203,6 +203,27 @@
             letter-spacing: 0.02em;
         }
 
+        .profile-links {
+            margin-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+        }
+
+        .profile-links a {
+            font-size: 0.82rem;
+            color: var(--muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rule);
+            letter-spacing: 0.02em;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .profile-links a:hover {
+            color: var(--ink);
+            border-color: var(--warm);
+        }
+
         /* --- CONTACT --- */
         .contact {
             padding-top: 4rem;
@@ -312,6 +333,14 @@
         <span class="exp-tag">Expedia</span>
         <span class="exp-tag">Hitachi Consulting</span>
         <span class="exp-tag">AI Trust Commons</span>
+    </div>
+
+    <div class="profile-links">
+        <a href="https://linkedin.com/in/nikhilsinghal" target="_blank">LinkedIn</a>
+        <a href="https://github.com/nikhilsi" target="_blank">GitHub</a>
+        <a href="https://hipcharter.com" target="_blank">HIP Charter</a>
+        <a href="https://aitrustcommons.org" target="_blank">AI Trust Commons</a>
+        <a href="https://orcid.org/0009-0003-5449-6830" target="_blank">ORCID</a>
     </div>
 </section>
 
