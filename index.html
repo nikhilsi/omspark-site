@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmSpark LLC — Technology Consulting</title>
+    <meta name="description" content="OmSpark LLC provides technology consulting, AI strategy, and enterprise systems architecture. Based in Seattle, WA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600&family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --paper: #f8f6f3;
+            --warm: #c4a882;
+            --muted: #6b6560;
+            --rule: #d9d4ce;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- NAV --- */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.4rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(248, 246, 243, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        nav .logo {
+            font-family: 'Newsreader', serif;
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 0.01em;
+            color: var(--ink);
+        }
+
+        nav .logo span {
+            color: var(--muted);
+            font-weight: 300;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--ink); }
+
+        /* --- SECTIONS --- */
+        section {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* --- HERO --- */
+        .hero {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+        }
+
+        .hero h1 {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 2.8rem;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            margin-bottom: 2rem;
+            color: var(--ink);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 580px;
+            font-weight: 300;
+        }
+
+        .divider {
+            width: 48px;
+            height: 1px;
+            background: var(--warm);
+            margin: 3.5rem 0;
+        }
+
+        /* --- SERVICES --- */
+        .services {
+            padding-bottom: 5rem;
+        }
+
+        .services h2 {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .services p {
+            color: var(--muted);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            padding: 1.6rem 0;
+            border-top: 1px solid var(--rule);
+        }
+
+        .service-item h3 {
+            font-size: 0.92rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--ink);
+        }
+
+        .service-item p {
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        /* --- ABOUT --- */
+        .about {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .about h2 {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .about p {
+            color: var(--muted);
+            font-weight: 300;
+            margin-bottom: 1.2rem;
+        }
+
+        .about .name {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        .experience {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .exp-tag {
+            font-size: 0.78rem;
+            padding: 0.35rem 0.85rem;
+            border: 1px solid var(--rule);
+            border-radius: 2px;
+            color: var(--muted);
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        /* --- CONTACT --- */
+        .contact {
+            padding-top: 4rem;
+            padding-bottom: 8rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .contact h2 {
+            font-family: 'Newsreader', serif;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .contact p {
+            color: var(--muted);
+            font-weight: 300;
+            margin-bottom: 0.6rem;
+        }
+
+        .contact a {
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rule);
+            transition: border-color 0.2s;
+        }
+
+        .contact a:hover {
+            border-color: var(--warm);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 2rem 3rem;
+            border-top: 1px solid var(--rule);
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--muted);
+            font-weight: 300;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 640px) {
+            html { font-size: 16px; }
+            nav { padding: 1rem 1.5rem; }
+            nav ul { gap: 1.2rem; }
+            .hero { padding-top: 7rem; padding-bottom: 4rem; }
+            .hero h1 { font-size: 2rem; }
+            section { padding: 0 1.5rem; }
+            .service-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">OmSpark <span>LLC</span></div>
+    <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Technology consulting for enterprises building with AI.</h1>
+    <p>We help organizations design, architect, and implement AI-informed systems that work alongside the people who use them. Strategy through execution. Seattle, WA.</p>
+    <div class="divider"></div>
+</section>
+
+<section class="services" id="services">
+    <h2>What We Do</h2>
+    <p>We work at the intersection of enterprise systems, AI strategy, and hands-on engineering. Our engagements range from architecture advisory to building production systems.</p>
+
+    <div class="service-grid">
+        <div class="service-item">
+            <h3>AI Strategy &amp; Governance</h3>
+            <p>Responsible AI adoption, governance frameworks, and integration planning for organizations navigating the shift to AI-augmented operations.</p>
+        </div>
+        <div class="service-item">
+            <h3>Systems Architecture</h3>
+            <p>Enterprise integration design, API strategy, data pipeline architecture, and system modernization across cloud and hybrid environments.</p>
+        </div>
+        <div class="service-item">
+            <h3>Product &amp; Platform Engineering</h3>
+            <p>Full-stack development from concept through production. Web, mobile, and API platforms built to scale.</p>
+        </div>
+        <div class="service-item">
+            <h3>Fractional CTO / VP Engineering</h3>
+            <p>Technical leadership for teams that need senior engineering guidance without a full-time hire. Architecture decisions, team structure, and delivery cadence.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About</h2>
+    <p><span class="name">Nikhil Singhal</span> is a technology executive with 25 years of experience across Microsoft, T-Mobile, AT&amp;T, Expedia, and Hitachi Consulting. He has led engineering organizations of 50 to 200 people, managed platform migrations at enterprise scale, and shipped consumer and enterprise products used by millions.</p>
+
+    <p>His current work sits at the intersection of AI product development and AI governance. He is the founder of <a href="https://aitrustcommons.org" target="_blank">AI Trust Commons</a> and author of the <a href="https://hipcharter.com" target="_blank">HIP Charter</a>, a framework for mapping human-AI partnership patterns. He has submitted formal comments to NIST on AI identity and governance.</p>
+
+    <p>In the past 10 months, he has designed, built, and shipped 8 AI-integrated products across web, mobile, and browser extension platforms, each exploring a different pattern of human-AI collaboration.</p>
+
+    <div class="experience">
+        <span class="exp-tag">Microsoft</span>
+        <span class="exp-tag">T-Mobile</span>
+        <span class="exp-tag">AT&amp;T</span>
+        <span class="exp-tag">Expedia</span>
+        <span class="exp-tag">Hitachi Consulting</span>
+        <span class="exp-tag">AI Trust Commons</span>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Get in Touch</h2>
+    <p><a href="mailto:nikhil@omspark.com">nikhil@omspark.com</a></p>
+    <p><a href="https://linkedin.com/in/nikhilsinghal" target="_blank">LinkedIn</a></p>
+    <p>Seattle, WA</p>
+</section>
+
+<footer>
+    &copy; 2026 OmSpark LLC. All rights reserved.
+</footer>
+
+</body>
+</html>
